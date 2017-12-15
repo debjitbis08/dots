@@ -160,6 +160,6 @@ augroup javascript_folding
     au FileType javascript setlocal foldmethod=syntax
 augroup END
 
-execute pathogen#infect()
+" execute pathogen#infect()
 
 
