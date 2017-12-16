@@ -1,28 +1,28 @@
 [alias]
-	# View abbreviated SHA, description, and history graph of the latest 20 commits
-	l = log --pretty=oneline -n 20 --graph --abbrev-commit
+        # View abbreviated SHA, description, and history graph of the latest 20 commits
+        l = log --pretty=oneline -n 20 --graph --abbrev-commit
 
-	# View the current working tree status using the short format
-	s = status -s
+        # View the current working tree status using the short format
+        s = status -s
 
-	# Show the diff between the latest commit and the current state
-	d = !"git diff-index --quiet HEAD -- || clear; git --no-pager diff --patch-with-stat"
+        # Show the diff between the latest commit and the current state
+        d = !"git diff-index --quiet HEAD -- || clear; git --no-pager diff --patch-with-stat"
 
         # Switch to a branch, creating it if necessary
-	go = "!f() { git checkout -b \"$1\" 2> /dev/null || git checkout \"$1\"; }; f"
+        go = "!f() { git checkout -b \"$1\" 2> /dev/null || git checkout \"$1\"; }; f"
 
-	# Show verbose output about tags, branches or remotes
-	tags = tag -l
-	branches = branch -a
-	remotes = remote -v
+        # Show verbose output about tags, branches or remotes
+        tags = tag -l
+        branches = branch -a
+        remotes = remote -v
 
-	# List aliases
-	aliases = config --get-regexp alias
+        # List aliases
+        aliases = config --get-regexp alias
 
-	# Amend the currently staged files to the latest commit
-	amend = commit --amend --reuse-message=HEAD
+        # Amend the currently staged files to the latest commit
+        amend = commit --amend --reuse-message=HEAD
 [core]
-	editor = vim
+        editor = vim
 [user]
-	name = Debjit Biswas
-	email = debjit@fastmail.fm
+        name = Debjit Biswas
+        email = debjit@fastmail.fm
