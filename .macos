@@ -24,3 +24,21 @@ open "${HOME}/solarized/iterm2-colors-solarized/Solarized Dark.itermcolors"
 
 # Don’t display the annoying prompt when quitting iTerm
 defaults write com.googlecode.iterm2 PromptOnQuit -bool false
+
+###############################################################################
+# Dock, Dashboard, and hot corners                                            #
+###############################################################################
+
+# Autohide dock
+defaults write com.apple.dock autohide -bool true
+
+# Minimize windows into their application’s icon
+defaults write com.apple.dock minimize-to-application -bool true
+
+# Enable spring loading for all Dock items
+defaults write com.apple.dock enable-spring-load-actions-on-all-items -bool true
+
+for app in "Activity Monitor" \
+	"Dock"; do
+	killall "${app}" &> /dev/null
+done
