@@ -52,6 +52,23 @@ Plugin 'vim-airline/vim-airline-themes'
   Plugin 'neovimhaskell/haskell-vim'
 "" }}}
 
+"" Plugin: Vim Startify {{{
+  " A fancy start screen for Vim
+  Plugin 'mhinz/vim-startify'
+  " A list of files to bookmark
+  let g:startify_bookmarks=[
+  \ '~/.vim/vimrc',
+  \ '~/.vim/plugins.vim',
+  \]
+  " A list of Vim regular expressions that filters recently used files
+  let g:startify_skiplist=[
+  \ 'COMMIT_EDITMSG',
+  \ $VIMRUNTIME .'/doc',
+  \ 'plugged/.*/doc',
+  \ 'bundle/.*/doc',
+  \]
+"" }}}
+
 call vundle#end()
 
 syntax on
@@ -63,6 +80,7 @@ set showmode
 set tw=80
 set smartcase
 set smarttab
+set guifont=Menlo\ Regular:h13
 
 " Indent automatically depending on filetype
 filetype plugin indent on
