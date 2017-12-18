@@ -1,0 +1,11 @@
+{
+    "javascript.validate.enable": false,
+    "workbench.colorTheme": "Monokai Pro",
+    "workbench.iconTheme": "Monokai Pro Icons",
+    "editor.fontSize": 13,
+    "haskell.ghcMod.executablePath": "stack",
+    "vim.easymotion": true,
+    "vim.easymotionMarkerFontFamily": "Monospace",
+    "vim.easymotionMarkerFontSize": "11",
+    "vim.easymotionMarkerHeight": 16
+}
