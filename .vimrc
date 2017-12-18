@@ -42,6 +42,16 @@ Plugin 'honza/vim-snippets'
 Plugin 'vim-airline/vim-airline'
 Plugin 'vim-airline/vim-airline-themes'
 
+"" Plugin: Easymotion {{{
+  " Provides a much simpler way to use motions in Vim
+  Plugin 'Lokaltog/vim-easymotion'
+"" }}}
+
+"" Plugin: Haskell {{{
+  " Syntax Highlighting and Indentation for Haskell and Cabal
+  Plugin 'neovimhaskell/haskell-vim'
+"" }}}
+
 call vundle#end()
 
 syntax on
