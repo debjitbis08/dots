@@ -265,11 +265,15 @@
 	<key>NSTableView Supports v2 KeyBingingTable</key>
 	<true/>
 	<key>NSWindow Frame NSFontPanel</key>
-	<string>608 309 445 77 0 0 1280 777 </string>
+	<string>608 175 445 77 0 0 1280 777 </string>
+	<key>NSWindow Frame SessionsPreferences</key>
+	<string>269 135 606 469 0 0 1280 777 </string>
 	<key>NSWindow Frame SharedPreferences</key>
-	<string>267 214 1016 512 0 0 1280 777 </string>
+	<string>267 254 918 512 0 0 1280 777 </string>
 	<key>NSWindow Frame iTerm Window 0</key>
-	<string>0 91 1280 686 0 0 1280 777 </string>
+	<string>0 66 1280 711 0 0 1280 777 </string>
+	<key>NSWindow Frame iTerm Window 1</key>
+	<string>152 275 570 502 0 0 1280 777 </string>
 	<key>New Bookmarks</key>
 	<array>
 		<dict>
@@ -881,8 +885,12 @@
 			<array/>
 			<key>Terminal Type</key>
 			<string>xterm-new</string>
+			<key>Thin Strokes</key>
+			<integer>4</integer>
 			<key>Transparency</key>
 			<real>0.0</real>
+			<key>Unicode Normalization</key>
+			<integer>0</integer>
 			<key>Unlimited Scrollback</key>
 			<false/>
 			<key>Use Bold Font</key>
@@ -907,8 +915,18 @@
 	<true/>
 	<key>NoSyncInstallationId</key>
 	<string>B5C13F03-C4AC-4856-903B-148CD8F518C5</string>
+	<key>NoSyncLastTipTime</key>
+	<real>535139506.07961202</real>
 	<key>NoSyncTimeOfFirstLaunchOfVersionWithTip</key>
 	<real>535055249.48925698</real>
+	<key>NoSyncTipsToNotShow</key>
+	<array>
+		<string>000</string>
+		<string>0000</string>
+		<string>0001</string>
+		<string>0002</string>
+		<string>0003</string>
+	</array>
 	<key>NoSyncTurnOffBracketedPasteOnHostChange</key>
 	<true/>
 	<key>OpenArrangementAtStartup</key>
@@ -963,13 +981,19 @@
 	<key>SUHasLaunchedBefore</key>
 	<true/>
 	<key>SULastCheckTime</key>
-	<date>2017-12-15T18:38:37Z</date>
+	<date>2017-12-16T18:38:34Z</date>
 	<key>SUSendProfileInfo</key>
 	<false/>
 	<key>TabStyle</key>
 	<integer>0</integer>
 	<key>TabViewType</key>
 	<integer>0</integer>
+	<key>TimeBetweenTips</key>
+	<real>86400</real>
+	<key>ToolbeltTools</key>
+	<array>
+		<string>Paste History</string>
+	</array>
 	<key>WordCharacters</key>
 	<string>/-+\~_.</string>
 	<key>iTerm Version</key>
