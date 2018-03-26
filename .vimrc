@@ -41,6 +41,7 @@ Plugin 'garbas/vim-snipmate'
 Plugin 'honza/vim-snippets'
 Plugin 'vim-airline/vim-airline'
 Plugin 'vim-airline/vim-airline-themes'
+Plugin 'parsonsmatt/intero-neovim'
 
 "" Plugin: Easymotion {{{
   " Provides a much simpler way to use motions in Vim
@@ -80,7 +81,9 @@ set showmode
 set tw=80
 set smartcase
 set smarttab
-set guifont=Menlo\ Regular:h13
+if !has('nvim')
+  set guifont=Menlo\ Regular:h13
+endif
 
 " Indent automatically depending on filetype
 filetype plugin indent on
@@ -94,7 +97,9 @@ set expandtab
 set incsearch
 set mouse=a
 set history=1000
-set clipboard=unnamedplus,autoselect
+if !has('nvim')
+  set clipboard=unnamedplus,autoselect
+endif
 set smartcase
 " Case insensitive search
 set ic

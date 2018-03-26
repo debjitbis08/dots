@@ -21,6 +21,12 @@
 
         # Amend the currently staged files to the latest commit
         amend = commit --amend --reuse-message=HEAD
+
+        # Push for review to be merged to master
+        push-for-review = push origin HEAD:refs/for/master
+
+        # Push to save as draft
+        push-draft = push origin HEAD:refs/drafts/master
 [core]
         editor = vim
 [user]

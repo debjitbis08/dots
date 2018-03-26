@@ -26,11 +26,13 @@ brew install vim --with-override-system-vi
 brew install grep
 brew install openssh
 brew install screen
+brew install wget
 
 brew install fish
 chsh -s `which fish`
 
 brew install git
+brew install yarn --without-node
 
 # Remove outdated versions from the cellar.
 brew cleanup

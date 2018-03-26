@@ -7,5 +7,17 @@
     "vim.easymotion": true,
     "vim.easymotionMarkerFontFamily": "Monospace",
     "vim.easymotionMarkerFontSize": "11",
-    "vim.easymotionMarkerHeight": 16
+    "vim.easymotionMarkerHeight": 16,
+    "gitlens.advanced.messages": {
+        "suppressCommitHasNoPreviousCommitWarning": false,
+        "suppressCommitNotFoundWarning": false,
+        "suppressFileNotUnderSourceControlWarning": false,
+        "suppressGitVersionWarning": false,
+        "suppressLineUncommittedWarning": false,
+        "suppressNoRepositoryWarning": false,
+        "suppressUpdateNotice": false,
+        "suppressWelcomeNotice": true
+    },
+    "elm.formatOnSave": true,
+    "gitlens.keymap": "alternate"
 }
