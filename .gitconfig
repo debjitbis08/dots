@@ -26,7 +26,7 @@
         push-for-review = push origin HEAD:refs/for/master
 
         # Push to save as draft
-        push-draft = push origin HEAD:refs/drafts/master
+        push-wip = push origin HEAD:refs/for/master%wip
 [core]
         editor = vim
 [user]

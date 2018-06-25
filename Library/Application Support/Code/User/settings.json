@@ -21,5 +21,10 @@
         "suppressWelcomeNotice": true
     },
     "elm.formatOnSave": true,
-    "gitlens.keymap": "chorded"
+    "gitlens.keymap": "chorded",
+    "latex-workshop.view.pdf.viewer": "tab",
+    "gitlens.historyExplorer.enabled": true,
+    "git.autofetch": true,
+    "editor.fontLigatures": true,
+    "editor.fontFamily": "Fira Code, Menlo, Monaco, 'Courier New', monospace"
 }
