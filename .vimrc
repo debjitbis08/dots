@@ -74,6 +74,9 @@ call vundle#end()
 
 syntax on
 
+" Use new regular expressions engine
+set re=0
+
 set nocompatible
 set number
 set nowrap
