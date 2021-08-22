@@ -33,4 +33,9 @@
         name = Debjit Biswas
         email = debjit@fastmail.fm
 [credential]
-	helper = /usr/share/doc/git/contrib/credential/gnome-keyring/git-credential-gnome-keyring
+	helper = /usr/share/doc/git/contrib/credential/libsecret/git-credential-libsecret
+[filter "lfs"]
+	clean = git-lfs clean -- %f
+	smudge = git-lfs smudge -- %f
+	process = git-lfs filter-process
+	required = true

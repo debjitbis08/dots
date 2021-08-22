@@ -2,75 +2,52 @@ set shell=bash
 set nocompatible
 filetype off
 
-set rtp+=~/.vim/bundle/Vundle.vim
-call vundle#begin()
+let data_dir = has('nvim') ? stdpath('data') . '/site' : '~/.vim'
+if empty(glob(data_dir . '/autoload/plug.vim'))
+  silent execute '!curl -fLo '.data_dir.'/autoload/plug.vim --create-dirs  https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim'
+  autocmd VimEnter * PlugInstall --sync | source $MYVIMRC
+endif
 
-Plugin 'VundleVim/Vundle.vim'
-Plugin 'Command-T'
-Plugin 'Syntastic'
-Plugin 'ctrlp.vim'
-" Plugin 'taglist.vim'
-" Plugin 'railscasts'
-Plugin 'AutoComplPop'
-Plugin 'Markdown'
-Plugin 'Solarized'
-Plugin 'hlint'
-Plugin 'SuperTab'
-Plugin 'neco-ghc'
-Plugin 'Tabular'
+call plug#begin('~/.vim/plugged')
 
-Plugin 'crusoexia/vim-monokai'
-Plugin 'editorconfig/editorconfig-vim'
-Plugin 'raimondi/delimitmate'
-Plugin 'Shougo/vimproc.vim'
-Plugin 'pangloss/vim-javascript'
-Plugin 'jelera/vim-javascript-syntax'
-Plugin 'Lokaltog/powerline'
-Plugin 'tomasr/molokai'
-Plugin 'nathanaelkane/vim-indent-guides'
-Plugin 'pbrisbin/vim-syntax-shakespeare'
-Plugin 'marijnh/tern_for_vim'
-Plugin 'cypok/vim-sml'
-Plugin 'eagletmt/ghcmod-vim'
-Plugin 'tpope/vim-fugitive'
-Plugin 'scrooloose/nerdtree'
-Plugin 'scrooloose/nerdcommenter'
-Plugin 'MarcWeber/vim-addon-mw-utils'
-Plugin 'tomtom/tlib_vim'
-Plugin 'garbas/vim-snipmate'
-Plugin 'honza/vim-snippets'
-Plugin 'vim-airline/vim-airline'
-Plugin 'vim-airline/vim-airline-themes'
-Plugin 'parsonsmatt/intero-neovim'
+
+Plug 'bluz71/vim-nightfly-guicolors'
+Plug 'editorconfig/editorconfig-vim'
+Plug 'scrooloose/nerdtree'
+Plug 'sheerun/vim-polyglot'
+Plug 'dense-analysis/ale'
+Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
+" Plugin 'raimondi/delimitmate'
+" Plugin 'Shougo/vimproc.vim'
+" Plugin 'Lokaltog/powerline'
+" Plugin 'tomasr/molokai'
+" Plugin 'nathanaelkane/vim-indent-guides'
+" Plugin 'pbrisbin/vim-syntax-shakespeare'
+" Plugin 'marijnh/tern_for_vim'
+" Plugin 'cypok/vim-sml'
+" Plugin 'eagletmt/ghcmod-vim'
+" Plugin 'tpope/vim-fugitive'
+" Plugin 'scrooloose/nerdcommenter'
+" Plugin 'MarcWeber/vim-addon-mw-utils'
+" Plugin 'tomtom/tlib_vim'
+" Plugin 'garbas/vim-snipmate'
+" Plugin 'honza/vim-snippets'
+" Plugin 'vim-airline/vim-airline'
+" Plugin 'vim-airline/vim-airline-themes'
+" Plugin 'parsonsmatt/intero-neovim'
 
 "" Plugin: Easymotion {{{
   " Provides a much simpler way to use motions in Vim
-  Plugin 'Lokaltog/vim-easymotion'
+  " Plugin 'Lokaltog/vim-easymotion'
 "" }}}
 
 "" Plugin: Haskell {{{
   " Syntax Highlighting and Indentation for Haskell and Cabal
-  Plugin 'neovimhaskell/haskell-vim'
+  " Plugin 'neovimhaskell/haskell-vim'
 "" }}}
 
-"" Plugin: Vim Startify {{{
-  " A fancy start screen for Vim
-  Plugin 'mhinz/vim-startify'
-  " A list of files to bookmark
-  let g:startify_bookmarks=[
-  \ '~/.vim/vimrc',
-  \ '~/.vim/plugins.vim',
-  \]
-  " A list of Vim regular expressions that filters recently used files
-  let g:startify_skiplist=[
-  \ 'COMMIT_EDITMSG',
-  \ $VIMRUNTIME .'/doc',
-  \ 'plugged/.*/doc',
-  \ 'bundle/.*/doc',
-  \]
-"" }}}
 
-call vundle#end()
+call plug#end()
 
 syntax on
 
@@ -114,9 +91,8 @@ set hls
 set lbr
 
 " Change colorscheme from default to delek
-set background=dark
-" colorscheme solarized
-colorscheme monokai
+" set background=dark
+colorscheme nightfly
 
 set completeopt=menuone,menu,longest
 
@@ -126,7 +102,7 @@ set wildmenu
 set completeopt+=longest
 
 set t_Co=256
-" set termguicolors
+set termguicolors
 
 set cmdheight=1
 
@@ -160,6 +136,8 @@ map <silent> tw :GhcModTypeInsert<CR>
 map <silent> ts :GhcModSplitFunCase<CR>
 map <silent> tq :GhcModType<CR>
 map <silent> te :GhcModTypeClear<CR>
+
+nnoremap <C-p> :FZF<CR>
 
 let g:SuperTabDefaultCompletionType = '<c-x><c-o>'
 
@@ -196,7 +174,4 @@ augroup javascript_folding
     au!
     au FileType javascript setlocal foldmethod=syntax
 augroup END
-
-" execute pathogen#infect()
-
 
